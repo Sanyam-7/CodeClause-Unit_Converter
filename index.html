@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>unit</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="outer">
+      <div class="acb">Unit Converter</div>
+      <div id="cover">
+        <form name="uc">
+          <table class="main">
+            <tr>
+              <td>Unit Type</td>
+              <td>
+                <select id="ut" onchange="selunit();">
+                  <option value="1">Length</option>
+                  <option value="2">Area</option>
+                  <option value="3">Speed</option>
+                  <option value="4">Weight</option>
+                  <option value="5">Volume</option>
+                  <!-- <option value="6">Temperature</option> -->
+                </select>
+              </td>
+            </tr>
+          </table>
+
+          <div id="t1">
+            <table class="main">
+              <tr>
+                <td>No. of units</td>
+                <td>
+                  <input id="lip" value="1" onchange="len();" />
+                  <tr>
+                    <td>Convert from</td>
+                    <td>
+                      <select id="flength" onchange="len();">
+                        <option value="1">Millimeters</option>
+                        <option value="10">Centimeters</option>
+                        <option value="1000" selected>Meters</option>
+                        <option value="1000000">Kilometers</option>
+                        <option value="25.4">Inches</option>
+                        <option value="304.8">Feet</option>
+                        <option value="914.4">Yards</option>
+                        <option value="1609344">Miles</option>
+                        <option value="1852000">Nautical Miles</option>
+                        <option value="1701.8">Smoots</option>
+                      </select>
+
+                      <tr>
+                        <td>Convert to</td>
+                        <td>
+                          <select id="tlength" onchange="len();">
+                            <option value="1">Millimeters</option>
+                            <option value="10">Centimeters</option>
+                            <option value="1000">Meters</option>
+                            <option value="1000000">Kilometers</option>
+                            <option value="25.4">Inches</option>
+                            <option value="304.8">Feet</option>
+                            <option value="914.4" selected>Yards</option>
+                            <option value="1609344">Miles</option>
+                            <option value="1852000">Nautical Miles</option>
+                            <option value="1701.8">Smoots</option>
+                          </select>
+
+                          <tr>
+                            <td colspan="2">
+                              <input class="output" id="lop" />
+                            </td>
+                          </tr>
+                        </td>
+                      </tr>
+                    </td>
+                  </tr>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div id="t2">
+            <table class="main">
+              <tr>
+                <td>No. of units</td>
+                <td>
+                  <input id="aip" value="1" onchange="area();" />
+                  <tr>
+                    <td>Convert from</td>
+                    <td>
+                      <select id="farea" onchange="area();">
+                        <option value=".01">Sq. Millimeter</option>
+                        <option value="1">Sq. Centimeters</option>
+                        <option value="10000" selected>Sq. Meters</option>
+                        <option value="10000000000">Sq. Kilometers</option>
+                        <option value="6.4516">Sq. Inches</option>
+                        <option value="929.0304">Sq. Feet</option>
+                        <option value="8361.2736">Sq. Yards</option>
+                        <option value="25899881103.36">Sq. Miles</option>
+                        <option value="100000000">Hectares</option>
+                        <option value="40468564">Acres</option>
+                      </select>
+
+                      <tr>
+                        <td>Convert to</td>
+                        <td>
+                          <select id="tarea" onchange="area();">
+                            <option value=".01">Sq. Millimeter</option>
+                            <option value="1">Sq. Centimeters</option>
+                            <option value="10000">Sq. Meters</option>
+                            <option value="10000000000">Sq. Kilometers</option>
+                            <option value="6.4516">Sq. Inches</option>
+                            <option value="929.0304">Sq. Feet</option>
+                            <option value="8361.2736" selected>
+                              Sq. Yards
+                            </option>
+                            <option value="25899881103.36">Sq. Miles</option>
+                            <option value="100000000">Hectares</option>
+                            <option value="40468564">Acres</option>
+                          </select>
+
+                          <tr>
+                            <td colspan="2">
+                              <input class="output" id="aop" />
+                            </td>
+                          </tr>
+                        </td>
+                      </tr>
+                    </td>
+                  </tr>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div id="t3">
+            <table class="main">
+              <tr>
+                <td>No. of units</td>
+                <td>
+                  <input id="sip" value="1" onchange="speed();" />
+                  <tr>
+                    <td>Convert from</td>
+                    <td>
+                      <select id="fspeed" onchange="speed();">
+                        <option value="0.1">Millimeters /Sec</option>
+                        <option value="1">Centimeters /Sec</option>
+                        <option value="100">Meters /Sec</option>
+                        <option value="100000">Kilometers /Sec</option>
+                        <option value="27.77778" selected>
+                          Kilometers /Hour
+                        </option>
+                        <option value="2.54">Inches /Sec</option>
+                        <option value="30.48">Feet /Sec</option>
+                        <option value="91.44">Yards /Sec</option>
+                        <option value="160934.4">Miles /Sec</option>
+                        <option value="44.704">Miles /Hour</option>
+                        <option value="51.4443">Knots</option>
+                      </select>
+
+                      <tr>
+                        <td>Convert to</td>
+                        <td>
+                          <select id="tspeed" onchange="speed();">
+                            <option value="0.1">Millimeters /Sec</option>
+                            <option value="1">Centimeters /Sec</option>
+                            <option value="100" selected>Meters /Sec</option>
+                            <option value="100000">Kilometers /Sec</option>
+                            <option value="27.77778">Kilometers /Hour</option>
+                            <option value="2.54">Inches /Sec</option>
+                            <option value="30.48">Feet /Sec</option>
+                            <option value="91.44">Yards /Sec</option>
+                            <option value="160934.4">Miles /Sec</option>
+                            <option value="44.704">Miles /Hour</option>
+                            <option value="51.4443">Knots</option>
+                          </select>
+
+                          <tr>
+                            <td colspan="2">
+                              <input class="output" id="sop" />
+                            </td>
+                          </tr>
+                        </td>
+                      </tr>
+                    </td>
+                  </tr>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div id="t4">
+            <table class="main">
+              <tr>
+                <td>No. of units</td>
+                <td>
+                  <input id="wip" value="1" onchange="weight();" />
+                  <tr>
+                    <td>Convert from</td>
+                    <td>
+                      <select id="fweight" onchange="weight();">
+                        <option value="1">Grams</option>
+                        <option value="1000" selected>Kilograms</option>
+                        <option value="100000">Quintals</option>
+                        <option value="1000000">Tonnes</option>
+                        <option value="11.66381">Tolas (in India)</option>
+                        <option value="28.34952">Ounces</option>
+                        <option value="453.59237">Pounds</option>
+                        <option value="907184.74">Short Tons (US)</option>
+                        <option value="1016047">Long Tons (UK)</option>
+                      </select>
+
+                      <tr>
+                        <td>Convert to</td>
+                        <td>
+                          <select id="tweight" onchange="weight();">
+                            <option value="1">Grams</option>
+                            <option value="1000">Kilograms</option>
+                            <option value="100000">Quintals</option>
+                            <option value="1000000" selected>Tonnes</option>
+                            <option value="11.66381">Tolas (in India)</option>
+                            <option value="28.34952">Ounces</option>
+                            <option value="453.59237">Pounds</option>
+                            <option value="907184.74">Short Tons (US)</option>
+                            <option value="1016047">Long Tons (UK)</option>
+                          </select>
+
+                          <tr>
+                            <td colspan="2">
+                              <input class="output" id="wop" />
+                            </td>
+                          </tr>
+                        </td>
+                      </tr>
+                    </td>
+                  </tr>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div id="t5">
+            <table class="main">
+              <tr>
+                <td>No. of units</td>
+                <td>
+                  <input id="vip" value="1" onchange="vol();" />
+                  <tr>
+                    <td>Convert from</td>
+                    <td>
+                      <select id="fvol" onchange="vol();">
+                        <option value="0.001">Millilter</option>
+                        <option value="1000" selected>Litres</option>
+                        <option value="1000000">Cubic Meters</option>
+                        <option value="16.38706">Cubic Inches</option>
+                        <option value="28316.85">Cubic Feet</option>
+                        <option value="764555.858">Cubic Yards</option>
+                        <option value="29.5735">Ounces</option>
+                        <option value="3785.41">Gallons</option>
+                        <option value="473.17625">Pints</option>
+                        <option value="946.3525">Quarts</option>
+                        <option value="14.78676">Tablespoons</option>
+                        <option value="4.92892">Teaspoons</option>
+                      </select>
+
+                      <tr>
+                        <td>Convert to</td>
+                        <td>
+                          <select id="tvol" onchange="vol();">
+                            <option value="0.001">Millilter</option>
+                            <option value="1000">Litres</option>
+                            <option value="1000000">Cubic Meters</option>
+                            <option value="16.38706">Cubic Inches</option>
+                            <option value="28316.85" selected>
+                              Cubic Feet
+                            </option>
+                            <option value="764555.858">Cubic Yards</option>
+                            <option value="29.5735">Ounces</option>
+                            <option value="3785.41">Gallons</option>
+                            <option value="473.17625">Pints</option>
+                            <option value="946.3525">Quarts</option>
+                            <option value="14.78676">Tablespoons</option>
+                            <option value="4.92892">Teaspoons</option>
+                          </select>
+
+                          <tr>
+                            <td colspan="2">
+                              <input class="output" id="vop" />
+                            </td>
+                          </tr>
+                        </td>
+                      </tr>
+                    </td>
+                  </tr>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div id="t6">
+            <table class="main">
+              <tr>
+                <td>
+                  <input id="tip" value="1" onchange="temp();" />
+                  <tr>
+                    <td>Convert from</td>
+                    <td>
+                      <tr>
+                        <td>Convert to</td>
+                        <td>
+                          <tr>
+                            <td colspan="2">
+                              <input class="output" id="top1" />
+                            </td>
+                          </tr>
+                        </td>
+                      </tr>
+                    </td>
+                  </tr>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

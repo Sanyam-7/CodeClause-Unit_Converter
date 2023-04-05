@@ -1,0 +1,67 @@
+html {
+  background-color: #e4e9fd;
+  background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #e4e9fd 50%);
+  min-height: 1000px;
+  font-family: "helvetica neue";
+}
+
+#outer {
+  width: 90%;
+  max-width: 600px;
+  background: #fff;
+  text-align: center;
+  margin: 0 auto;
+  font: 500 18px arial;
+}
+#cover {
+  background: -webkit-linear-gradient(#eee, #a683e3);
+  border: 2px solid #111;
+  padding: 15px 0;
+}
+.main {
+  table-layout: fixed;
+  width: 96%;
+  margin: 5px auto;
+  text-align: left;
+  border: 0;
+}
+.main td {
+  padding: 0 8px;
+  vertical-align: middle;
+  width: 50%;
+  border: 0;
+}
+ul {
+  padding: 0 0 5px 5px;
+  list-style: none;
+}
+li {
+  line-height: 16px;
+}
+.main input,
+select {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 3px 0;
+  padding: 2px;
+  text-align: center;
+}
+input.output {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 0;
+  border: 0;
+  text-align: center;
+}
+#t1 {
+  width: 100%;
+}
+#t2,
+#t3,
+#t4,
+#t5,
+#t6 {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
